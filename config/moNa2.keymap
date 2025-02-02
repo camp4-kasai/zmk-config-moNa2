@@ -13,11 +13,17 @@
     require-prior-idle-ms = <125>;
 };
 
+&lt {
+    flavor = "balanced";
+    quick-tap-ms = <200>;
+    require-prior-idle-ms = <125>;
+};
+
 / {
     combos {
         compatible = "zmk,combos";
 
-        mb3-2 {
+        mb3 {
             bindings = <&mkp MB3>;
             key-positions = <31 32>;
         };
@@ -25,21 +31,6 @@
         delete {
             bindings = <&kp DELETE>;
             key-positions = <40 41>;
-        };
-
-        mb1 {
-            bindings = <&mkp MB1>;
-            key-positions = <18 30>;
-        };
-
-        mb2 {
-            bindings = <&mkp MB2>;
-            key-positions = <19 31>;
-        };
-
-        mb3 {
-            bindings = <&mkp MB3>;
-            key-positions = <20 32>;
         };
 
         coron {
@@ -50,6 +41,11 @@
         semicoron {
             bindings = <&kp SEMICOLON>;
             key-positions = <5 17>;
+        };
+
+        capslock {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <12 19>;
         };
     };
 
@@ -99,10 +95,10 @@
 
         layer_1 {
             bindings = <
-&kp CARET        &kp TILDE      &kp PERCENT           &kp AMPERSAND           &kp DOUBLE_QUOTES                                                  &kp HOME                    &kp LC(LEFT)       &kp UP_ARROW  &kp LC(RIGHT)  &kp END
-&kp AT_SIGN      &kp DOLLAR     &mt LEFT_SHIFT MINUS  &mt LEFT_CONTROL EQUAL  &kp SINGLE_QUOTE    &trans                  &kp SEMICOLON          &kp COLON                   &kp LEFT           &kp DOWN      &kp RIGHT      &kp SEMICOLON
-&kp HASH         &kp ASTERISK   &kp PIPE              &kp EXCLAMATION         &mt LEFT_ALT GRAVE  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA     &kp PERIOD     &kp BACKSLASH
-&kp PRINTSCREEN  &kp PAGE_DOWN  &kp PAGE_UP           &trans                  &trans              &trans                  &trans                 &trans                                                                      &trans
+&kp CARET    &kp TILDE     &kp PERCENT           &kp AMPERSAND           &kp DOUBLE_QUOTES                                                  &kp HOME                    &kp LC(LEFT)       &kp UP_ARROW  &kp LC(RIGHT)  &kp END
+&kp AT_SIGN  &kp DOLLAR    &mt LEFT_SHIFT MINUS  &mt LEFT_CONTROL EQUAL  &kp SINGLE_QUOTE    &trans                  &kp SEMICOLON          &kp COLON                   &kp LEFT           &kp DOWN      &kp RIGHT      &kp SEMICOLON
+&kp HASH     &kp ASTERISK  &kp PIPE              &kp EXCLAMATION         &mt LEFT_ALT GRAVE  &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &mt RIGHT_ALT LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA     &kp PERIOD     &kp BACKSLASH
+&trans       &trans        &trans                &trans                  &trans              &trans                  &trans                 &trans                                                                      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -110,10 +106,10 @@
 
         layer_2 {
             bindings = <
-&kp F1   &kp F2   &kp F3   &kp LESS_THAN         &kp GREATER_THAN                                          &kp PERCENT           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&kp F4   &kp F5   &kp F6   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans           &kp COLON             &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&kp F7   &kp F8   &kp F9   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp LEFT_BRACE    &kp RIGHT_BRACE  &mt RIGHT_ALT KP_DOT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH
-&kp F10  &kp F11  &kp F12  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &trans            &trans           &kp KP_NUMBER_0                                                          &kp KP_ASTERISK
+&kp PRINTSCREEN  &trans  &trans          &kp LESS_THAN                      &kp GREATER_THAN                                             &kp PERCENT           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&trans           &trans  &kp LEFT_SHIFT  &mt LEFT_CONTROL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS     &trans            &trans           &kp COLON             &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans           &trans  &trans          &kp LEFT_BRACE                     &mt LEFT_ALT RIGHT_BRACE  &kp LEFT_BRACE    &kp RIGHT_BRACE  &mt RIGHT_ALT KP_DOT  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH
+&trans           &trans  &trans          &kp LEFT_BRACKET                   &kp RIGHT_BRACKET         &trans            &trans           &kp KP_NUMBER_0                                                          &kp KP_ASTERISK
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
@@ -121,10 +117,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&to 4   &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &to 4
+&kp F1  &kp F2  &kp F3          &kp F4            &kp F5                          &kp F6         &kp F7             &kp F8           &kp F9   &kp F10
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans        &trans    &trans  &trans         &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp F11  &kp F12
+&trans  &trans  &trans          &trans            &kp LEFT_ALT  &trans    &trans  &kp RIGHT_ALT  &trans             &trans           &trans   &trans
+&to 4   &trans  &trans          &trans            &trans        &trans    &trans  &trans                                                      &to 4
             >;
 
             sensor-bindings = <&scroll_up_down>;
