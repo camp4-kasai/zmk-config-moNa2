@@ -35,12 +35,12 @@
 
         coron {
             bindings = <&kp COLON>;
-            key-positions = <13 25 25>;
+            key-positions = <13 14>;
         };
 
         semicoron {
             bindings = <&kp SEMICOLON>;
-            key-positions = <18 30>;
+            key-positions = <18 17>;
         };
 
         capslock {
@@ -151,7 +151,7 @@
 &trans       &trans        &trans                &trans                  &trans             &trans                  &trans                 &trans                                                            &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp RIGHT LEFT>;
+            sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
         };
 
         layer_2 {
@@ -162,18 +162,18 @@
 &trans           &trans  &trans          &kp LEFT_BRACKET                   &kp RIGHT_BRACKET      &trans            &trans           &kp KP_NUMBER_0                                                     &kp KP_ASTERISK
             >;
 
-            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         layer_3 {
             bindings = <
-&kp F1  &kp F2  &kp F3          &kp F4            &kp F5                          &kp F6         &kp F7             &kp F8           &kp F9   &kp F10
-&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans        &trans    &trans  &trans         &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp F11  &kp F12
-&trans  &trans  &trans          &trans            &kp LEFT_ALT  &trans    &trans  &kp RIGHT_ALT  &trans             &trans           &trans   &trans
-&to 4   &trans  &trans          &trans            &trans        &trans    &trans  &trans                                                      &to 4
+&kp F1  &kp F2  &kp F3          &kp F4            &kp F5                    &kp F6  &kp F7             &kp F8           &kp F9   &kp F10
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &trans  &trans    &trans  &trans  &kp RIGHT_CONTROL  &kp RIGHT_SHIFT  &kp F11  &kp F12
+&trans  &trans  &trans          &trans            &trans  &trans    &trans  &trans  &trans             &trans           &trans   &trans
+&to 4   &trans  &trans          &trans            &trans  &trans    &trans  &trans                                               &to 4
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         layer_4 {
