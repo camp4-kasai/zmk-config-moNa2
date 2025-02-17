@@ -34,12 +34,12 @@
 
         coron {
             bindings = <&kp COLON>;
-            key-positions = <13 14>;
+            key-positions = <14 4>;
         };
 
         semicoron {
             bindings = <&kp SEMICOLON>;
-            key-positions = <18 17>;
+            key-positions = <17 5>;
         };
 
         capslock {
@@ -49,42 +49,42 @@
 
         lessThan {
             bindings = <&kp LESS_THAN>;
-            key-positions = <4 14>;
+            key-positions = <4 3>;
         };
 
         greaterThan {
             bindings = <&kp GREATER_THAN>;
-            key-positions = <5 17>;
+            key-positions = <5 6>;
         };
 
         leftBrace {
             bindings = <&kp LEFT_BRACE>;
-            key-positions = <3 13>;
+            key-positions = <3 2>;
         };
 
         rightBrace {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <6 18>;
+            key-positions = <6 7>;
         };
 
         leftPar {
             bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <12 2>;
+            key-positions = <2 1>;
         };
 
         rightPar {
             bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <7 19>;
+            key-positions = <7 8>;
         };
 
         leftBracket {
             bindings = <&kp LEFT_BRACKET>;
-            key-positions = <1 11>;
+            key-positions = <1 0>;
         };
 
         rightBracket {
             bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <8 20>;
+            key-positions = <8 9>;
         };
 
         comma {
