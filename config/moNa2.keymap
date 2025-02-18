@@ -10,6 +10,7 @@
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
+    require-prior-idle-ms = <125>;
 };
 
 &lt {
@@ -27,19 +28,14 @@
             key-positions = <31 32>;
         };
 
-        delete {
-            bindings = <&kp DELETE>;
-            key-positions = <40 41>;
-        };
-
         coron {
             bindings = <&kp COLON>;
-            key-positions = <14 4>;
+            key-positions = <10 11>;
         };
 
         semicoron {
             bindings = <&kp SEMICOLON>;
-            key-positions = <17 5>;
+            key-positions = <20 21>;
         };
 
         capslock {
@@ -89,12 +85,12 @@
 
         comma {
             bindings = <&kp COMMA>;
-            key-positions = <14 26>;
+            key-positions = <14 4>;
         };
 
         period {
             bindings = <&kp PERIOD>;
-            key-positions = <17 29>;
+            key-positions = <17 5>;
         };
     };
 
@@ -132,8 +128,8 @@
         default_layer {
             bindings = <
 &kp Q        &kp W         &kp E             &kp R               &kp T                                      &kp Y        &kp U                &kp I              &kp O      &kp P
-&kp A        &kp S         &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &kp G        &trans       &kp COLON        &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &kp L      &kp MINUS
-&kp Z        &kp X         &kp C             &kp V               &kp B        &kp COMMA    &kp PERIOD       &kp N        &kp M                &mkp LCLK          &mkp RCLK  &kp SLASH
+&kp A        &kp S         &mt LEFT_SHIFT D  &mt LEFT_CONTROL F  &kp G        &trans       &trans           &kp H        &mt RIGHT_CONTROL J  &mt RIGHT_SHIFT K  &kp L      &kp MINUS
+&kp Z        &kp X         &kp C             &kp V               &kp B        &trans       &kp DELETE       &kp N        &kp M                &mkp LCLK          &mkp RCLK  &kp SLASH
 &lt 3 LANG2  &kp LEFT_GUI  &kp ESCAPE        &kp LEFT_ALT        &lt 1 SPACE  &lt 2 TAB    &lt 2 BACKSPACE  &lt 1 ENTER                                                     &lt 3 LANG1
             >;
 
@@ -144,10 +140,10 @@
 
         layer_1 {
             bindings = <
-&kp CARET    &kp TILDE     &kp PERCENT           &kp AMPERSAND           &kp DOUBLE_QUOTES                                                 &kp HOME          &kp LC(LEFT)       &kp UP_ARROW  &kp LC(RIGHT)  &kp END
-&kp AT_SIGN  &kp DOLLAR    &mt LEFT_SHIFT MINUS  &mt LEFT_CONTROL EQUAL  &kp SINGLE_QUOTE   &trans                  &kp SEMICOLON          &kp COLON         &kp LEFT           &kp DOWN      &kp RIGHT      &kp SEMICOLON
-&kp HASH     &kp ASTERISK  &kp PIPE              &kp EXCLAMATION         &kp GRAVE          &kp LEFT_PARENTHESIS    &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA     &kp PERIOD     &kp BACKSLASH
-&trans       &trans        &trans                &trans                  &trans             &trans                  &trans                 &trans                                                            &trans
+&kp CARET    &kp TILDE     &kp PERCENT           &kp AMPERSAND           &kp DOUBLE_QUOTES                    &kp RA(RS(LEFT))  &kp LC(LEFT)       &kp UP_ARROW  &kp LC(RIGHT)  &kp RS(RA(RIGHT))
+&kp AT_SIGN  &kp DOLLAR    &mt LEFT_SHIFT MINUS  &mt LEFT_CONTROL EQUAL  &kp SINGLE_QUOTE   &trans    &trans  &kp HOME          &kp LEFT           &kp DOWN      &kp RIGHT      &kp END
+&kp HASH     &kp ASTERISK  &kp PIPE              &kp EXCLAMATION         &kp GRAVE          &trans    &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp COMMA     &kp PERIOD     &kp BACKSLASH
+&trans       &trans        &trans                &trans                  &trans             &trans    &trans  &trans                                                            &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LEFT RIGHT>;
@@ -155,10 +151,10 @@
 
         layer_2 {
             bindings = <
-&kp PRINTSCREEN  &trans  &trans          &kp LESS_THAN                      &kp GREATER_THAN                                          &kp PERCENT      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
-&trans           &trans  &kp LEFT_SHIFT  &mt LEFT_CONTROL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans            &trans           &kp COLON        &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
-&trans           &trans  &trans          &kp LEFT_BRACE                     &kp RIGHT_BRACE        &kp LEFT_BRACE    &kp RIGHT_BRACE  &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH
-&trans           &trans  &trans          &kp LEFT_BRACKET                   &kp RIGHT_BRACKET      &trans            &trans           &kp KP_NUMBER_0                                                     &kp KP_ASTERISK
+&kp PRINTSCREEN  &trans  &trans          &kp LESS_THAN                      &kp GREATER_THAN                         &kp PERCENT      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS
+&trans           &trans  &kp LEFT_SHIFT  &mt LEFT_CONTROL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans    &trans  &kp COLON        &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS
+&trans           &trans  &trans          &kp LEFT_BRACE                     &kp RIGHT_BRACE        &trans    &trans  &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH
+&trans           &trans  &trans          &kp LEFT_BRACKET                   &kp RIGHT_BRACKET      &trans    &trans  &kp KP_NUMBER_0                                                     &kp KP_ASTERISK
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
