@@ -103,10 +103,10 @@
 
         layer_2 {
             bindings = <
-&kp PRINTSCREEN  &trans  &trans          &kp LESS_THAN                      &kp GREATER_THAN                                    &kp PERCENT      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
-&trans           &trans  &kp LEFT_SHIFT  &mt LEFT_CONTROL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans               &trans  &kp COLON        &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS
-&trans           &trans  &trans          &kp LEFT_BRACE                     &kp RIGHT_BRACE        &trans               &trans  &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
-&trans           &trans  &trans          &trans                             &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &trans  &kp KP_NUMBER_0                                                     &kp KP_ASTERISK
+&kp PRINTSCREEN  &trans  &trans          &kp LESS_THAN                      &kp GREATER_THAN                                        &kp PERCENT      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_SLASH
+&trans           &trans  &kp LEFT_SHIFT  &mt LEFT_CONTROL LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans               &trans      &kp COLON        &kp KP_N4        &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_PLUS
+&trans           &trans  &trans          &kp LEFT_BRACE                     &kp RIGHT_BRACE        &trans               &trans      &kp KP_DOT       &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_MINUS
+&trans           &trans  &trans          &trans                             &kp LEFT_BRACKET       &kp RIGHT_BRACKET    &kp KP_DOT  &kp KP_NUMBER_0                                                     &kp KP_ASTERISK
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
